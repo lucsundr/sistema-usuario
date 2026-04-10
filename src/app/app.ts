@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
-import { Cadastro } from './cadastro/cadastro';
+import { Component, signal } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { ListaUsuarios } from './lista-usuarios/lista-usuarios';
 
 @Component({
  selector: 'app-root',
- imports: [Cadastro],
+ imports: [ListaUsuarios],
  templateUrl: './app.html',
  styleUrl: './app.css'
 })
 export class App {
- title = 'sistema-usuarios';
+ protected readonly title = signal('sistema-usuarios');
 }
